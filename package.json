@@ -1,0 +1,36 @@
+{
+  "name": "saratoga-cloud",
+  "version": "1.0.0",
+  "description": "Snoborder's Saratoga Financial Loan Application",
+  "main": "index.js",
+  "dependencies": {
+    "express-generator":"4.15.0",
+    "eslint":"4.7.0",
+    "easyxml":"2.0.1",
+    "node-red-contrib-http-auth0":"0.1.22",
+    "node-red-admin":"0.1.3",
+    "node-red-dashboard":"2.7.0",
+    "node-red-node-serialport":"0.4.4",
+    "node-red-node-google":"0.1.1",
+    "node-red-contrib-aws":"0.1.6", 
+    "node-red-node-mysql":"0.0.16",
+    "node-red-contrib-https":"1.0.0",
+    "node-red-contrib-ftp-sftp":"1.6.2",
+    "node-red-contrib-soap":"0.1.0",
+    "node-red-contrib-xmlrpc":"1.0.2",
+    "node-red-contrib-xml-validate":"0.1.5",
+    "node-red-contrib-merge":"0.1.1",
+    "json-concat":"0.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mortgage",
+    "saratoga",
+    "realty",
+    "snoborder"
+  ],
+  "author": "Dev Bhattacharyya",
+  "license": "MIT"
+}

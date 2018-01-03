@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MESSAGE xmlns="http://www.mismo.org/residential/2009/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ULDD="http://www.datamodelextension.org/Schema/ULDD" MISMOReferenceModelIdentifier="3.0[B263-12]" xsi:schemaLocation="http://www.datamodelextension.org/Schema/ULDD [REPLACE WITH PATH FOR YOUR SCHEMA LOCATION]/ULDD_Phase_3_Extension.xsd">
+	<ABOUT_VERSIONS>
+		<ABOUT_VERSION>
+			<AboutVersionIdentifier>FNM 3.0</AboutVersionIdentifier>
+			<CreatedDatetime>2017-01-25T09:07:33</CreatedDatetime>
+		</ABOUT_VERSION>
+	</ABOUT_VERSIONS>
+	<DEAL_SETS>
+		<DEAL_SET>
+			<DEALS>
+				<DEAL>
+					<COLLATERALS>
+						<COLLATERAL>
+							<PROPERTIES>
+								<PROPERTY>
+									<ADDRESS>
+										<AddressLineText>123 Main Street</AddressLineText>
+										<CityName>Anytown</CityName>
+										<PostalCode>20191</PostalCode>
+										<StateCode>VA</StateCode>
+									</ADDRESS>
+								</PROPERTY>
+							</PROPERTIES>
+						</COLLATERAL>
+					</COLLATERALS>
+					<LOANS>
+						<LOAN LoanRoleType="SubjectLoan">
+							<LOAN_STATE>
+								<LoanStateType>Current</LoanStateType>
+							</LOAN_STATE>
+							<MI_DATA>
+								<MI_DATA_DETAIL>
+									<LenderPaidMIInterestRateAdjustmentPercent>0.675</LenderPaidMIInterestRateAdjustmentPercent>
+									<MICertificateIdentifier>111333555</MICertificateIdentifier>
+									<MICompanyNameType>PMI</MICompanyNameType>
+									<MICoveragePercent>25</MICoveragePercent>
+									<MIPremiumFinancedIndicator>false</MIPremiumFinancedIndicator>
+									<MIPremiumSourceType>Lender</MIPremiumSourceType>
+								</MI_DATA_DETAIL>
+							</MI_DATA>
+						</LOAN>
+					</LOANS>
+				</DEAL>
+			</DEALS>
+		</DEAL_SET>
+	</DEAL_SETS>
+</MESSAGE>

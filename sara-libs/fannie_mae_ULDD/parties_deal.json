@@ -1,0 +1,14 @@
+{
+  "PARTIES": {
+    "PARTY": {
+      "ROLES": {
+        "PARTY_ROLE_IDENTIFIERS": {
+          "PARTY_ROLE_IDENTIFIER": { "PartyRoleIdentifier": "ABC Doc Prep" }
+        },
+        "ROLE": {
+          "ROLE_DETAIL": { "PartyRoleType": "LoanDeliveryFilePreparer" }
+        }
+      }
+    }
+  }
+}

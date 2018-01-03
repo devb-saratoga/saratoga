@@ -1,0 +1,42 @@
+{
+  "COLLATERALS": {
+    "COLLATERAL": {
+      "PROPERTIES": {
+        "PROPERTY": {
+          "ADDRESS": {
+            "AddressLineText": "123 Main Street",
+            "CityName": "Anytown",
+            "PostalCode": "20191",
+            "StateCode": "VA"
+          },
+          "FLOOD_DETERMINATION": {
+            "FLOOD_DETERMINATION_DETAIL": { "SpecialFloodHazardAreaIndicator": "false" }
+          },
+          "PROJECT": {
+            "PROJECT_DETAIL": {
+              "ProjectClassificationIdentifier": "G",
+              "PUDIndicator": "false"
+            }
+          },
+          "PROPERTY_DETAIL": {
+            "AttachmentType": "Detached",
+            "ConstructionMethodType": "SiteBuilt",
+            "FinancedUnitCount": "1",
+            "PropertyEstateType": "FeeSimple",
+            "PropertyFloodInsuranceIndicator": "false",
+            "PropertyStructureBuiltYear": "1998",
+            "PropertyUsageType": "PrimaryResidence"
+          },
+          "PROPERTY_VALUATIONS": {
+            "PROPERTY_VALUATION": {
+              "PROPERTY_VALUATION_DETAIL": {
+                "PropertyValuationAmount": "200000",
+                "PropertyValuationMethodType": "None"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

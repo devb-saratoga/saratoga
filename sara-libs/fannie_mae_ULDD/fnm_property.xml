@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROPERTY>
+	<ADDRESS>
+		<AddressLineText>123 Main Street</AddressLineText>
+		<CityName>Anytown</CityName>
+		<PostalCode>20191</PostalCode>
+		<StateCode>VA</StateCode>
+	</ADDRESS>
+	<FLOOD_DETERMINATION>
+		<FLOOD_DETERMINATION_DETAIL>
+			<SpecialFloodHazardAreaIndicator>false</SpecialFloodHazardAreaIndicator>
+		</FLOOD_DETERMINATION_DETAIL>
+	</FLOOD_DETERMINATION>
+	<PROJECT>
+		<PROJECT_DETAIL>
+			<ProjectClassificationIdentifier>G</ProjectClassificationIdentifier>
+			<PUDIndicator>false</PUDIndicator>
+		</PROJECT_DETAIL>
+	</PROJECT>
+	<PROPERTY_DETAIL>
+		<AttachmentType>Detached</AttachmentType>
+		<ConstructionMethodType>SiteBuilt</ConstructionMethodType>
+		<FinancedUnitCount>1</FinancedUnitCount>
+		<PropertyEstateType>FeeSimple</PropertyEstateType>
+		<PropertyFloodInsuranceIndicator>false</PropertyFloodInsuranceIndicator>
+		<PropertyStructureBuiltYear>1998</PropertyStructureBuiltYear>
+		<PropertyUsageType>PrimaryResidence</PropertyUsageType>
+	</PROPERTY_DETAIL>
+	<PROPERTY_VALUATIONS>
+		<PROPERTY_VALUATION>
+			<PROPERTY_VALUATION_DETAIL>
+				<PropertyValuationAmount>200000</PropertyValuationAmount>
+				<PropertyValuationMethodType>None</PropertyValuationMethodType>
+			</PROPERTY_VALUATION_DETAIL>
+		</PROPERTY_VALUATION>
+	</PROPERTY_VALUATIONS>
+</PROPERTY>
