@@ -9,12 +9,12 @@ module.exports = {
     debugMaxLength: 1000,
     editorTheme: {
         page: {
-            title: "Snoborder Saratoga Mortgage",
+            title: "Snoborder Saratoga",
             favicon: "/home/bitnami/.saratoga/sara-libs/favicon.ico",
             css: "/home/bitnami/.saratoga/sara-libs/node.css"
         },
         header: {
-            title: "Snoborder Saratoga Lending",
+            title: "Snoborder Saratoga",
             image: "/home/bitnami/.saratoga/snoborder.png", // or null to remove image
             url: "http://snoborder.com" // optional url to make the header text/image a link to this url
         },
