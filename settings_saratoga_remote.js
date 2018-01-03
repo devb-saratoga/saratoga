@@ -40,7 +40,7 @@ module.exports = {
     userDir: '/home/bitnami/.saratoga/',
     nodesDir: '/home/bitnami/.saratoga/nodes',
     httpRoot: '/saratoga',
-    httpStatic: '/home/bitnami/.saratoga/node-red-static/',
+    // httpStatic: '/home/bitnami/.saratoga/node-red-static/',
 
     //    adminAuth: {
     //        type: "credentials",
