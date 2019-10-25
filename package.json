@@ -9,7 +9,7 @@
     "easyxml":"2.0.1",
     "node-red-contrib-http-auth0":"0.1.22",
     "node-red-admin":"0.1.3",
-    "node-red-dashboard":"2.7.0",
+    "node-red-dashboard":">=2.17.0",
     "node-red-node-serialport":"0.4.4",
     "node-red-node-google":"0.1.1",
     "node-red-contrib-aws":"0.1.6", 
