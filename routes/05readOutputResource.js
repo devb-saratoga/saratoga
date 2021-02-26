@@ -4,7 +4,7 @@
  * License: MIT
  */
 
- const outFolder = './output/';
+ const outFolder = './logs/';
 const fs1 = require('fs');
 const fs2 = require('fs');
 const fs3 = require('fs');

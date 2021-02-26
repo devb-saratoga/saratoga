@@ -7,6 +7,7 @@
 
 ## Makefile
 ### build, clean, run, prune, status. test
+#### Ensure you change the folder name in S_INSTALL in Makefile 
 ```
     make [cmd]
     ## Examples

@@ -1,4 +1,4 @@
-S_INSTALL=/home/devbnjhp/nodejs/saratoga_docker
+S_INSTALL=/home/devbnjhp/nodejs/saratoga
 
 clean:
 	docker-compose -f $(S_INSTALL)/docker-compose.yaml down --remove-orphans

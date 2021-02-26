@@ -21,7 +21,7 @@ async function readS3(sobject) {
     return new Promise(
         (resolve, reject) => {
             var s3params = {
-                Bucket: "ucsd-elk",
+                Bucket: "companyx",
                 MaxKeys: 1000
             };
             var allObjects = [];
@@ -38,7 +38,7 @@ async function readS3(sobject) {
                         var newParams = {};
                         var ext = regxFileReader.exec(filename)[1];
                         if (ext == "gz" || ext == "json") {
-                            newParams.Bucket = "ucsd-elk";
+                            newParams.Bucket = "companyx";
                             newParams.Key = filename;
                             // newParams.Range = "bytes=0-9";
                             allObjects.push(newParams);
