@@ -14,7 +14,6 @@ let request = require("request");
 let reads3 = require('./00reads3Resource');
 let logfetch = require('./01logfetchResource');
 let logtransform = require('./02logtransformResource');
-// let logcorrect = require('./03logcorrectResource');
 let alz = require('./05readOutputResource');
 let flt = require('./06filterOutputResource');
 
@@ -28,20 +27,6 @@ module.exports = function(app, db) {
         res.send(logger);
     });
 
-    app.post('/keydata', (req, res) => {
-        let bp = req.body;
-        let key = bp.key;
-        console.log('got data', key);
-        let i = 0, result = '';
-        for (i=0; i<valcodes.length; i++) {
-            if (key == valcodes[i]) {
-                result = 'FiliBu$ter45TataM0bile'; 
-                break;
-            }
-        }
-        res.send({'result':result});
-    });
-
     app.post('/filterlogs', (req, res) => {
         console.log('/filter logs', req.body);
         let bp = req.body;
@@ -50,7 +35,6 @@ module.exports = function(app, db) {
     });
 
     app.post('/fetchlogs', (req, res) => {
-        // console.log('/fetch logs', req.body);
       res.send({});
     });
 

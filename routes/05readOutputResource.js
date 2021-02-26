@@ -4,29 +4,23 @@
  * License: MIT
  */
 
- const outFolder = './logs/';
+const oof = './logs/';
 const fs1 = require('fs');
 const fs2 = require('fs');
 const fs3 = require('fs');
-var users = [];
-var count = 0;
-var searchFor = '';
+var users = [], count = 0, searchFor = '';
 
 exports.readOutputResource = function (bparams) {
-  searchFor = '';
-  users = [];
-  count = 0;
+  searchFor = ''; users = []; count = 0;
   if (bparams.search != undefined) searchFor = bparams.search;
   if (searchFor == '') searchFor = 'userName';
   console.log('Searching for ', searchFor);
-  fs1.readdirSync(outFolder).forEach(file => {
-    var rfile = outFolder + file;
-    // console.log(rfile);
-    let logCrude = fs2.readFileSync(rfile, 'utf8');
+  fs1.readdirSync(oof).forEach(file => {
+    var rfile = oof + file;
+    let lcd = fs2.readFileSync(rfile, 'utf8');
     try {
-      let logData = JSON.parse(logCrude);
-      // console.log(logData.length);  
-      traverse(logData,process1);
+      let dlw = JSON.parse(lcd);
+      grainer(dlw,rainer);
     } catch (e) {
       return ({e});
     }
@@ -34,20 +28,17 @@ exports.readOutputResource = function (bparams) {
   return(users);
 }
 
-function traverse(o,func) {
+function grainer(o,func) {
   for (var i in o) {
       func.apply(this,[i,o[i]]);  
       if (o[i] !== null && typeof(o[i])=="object") {
-          //going one step down in the object tree!!
-          traverse(o[i],func);
+          grainer(o[i],func);
       }
   }
 }
 
-function process1(key,value) {
-  // console.log(key, value);
+function rainer(key,value) {
   if (key == searchFor) {
-    // if (value == "jit.b") count++;
     if (users.length <= 0) {
       users.push({"key":value, "value":1});
     } 
