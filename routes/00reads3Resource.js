@@ -9,7 +9,7 @@ let AWS = require('aws-sdk');
 let fs = require("fs");
 
 AWS.config.update({
-    region: "us-west-2",
+    region: "us-east-1",
 });
 var s3 = new AWS.S3();
 
