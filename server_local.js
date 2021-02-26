@@ -1,5 +1,10 @@
 /*jshint esversion: 6 */
 /*jshint node: true*/
+/**
+ * Saratoga Logs Analyzer
+ * Author: devb. Copyright www.devb.com
+ * License: MIT
+ */
 
 // server.js
 'use strict';

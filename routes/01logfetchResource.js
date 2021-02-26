@@ -4,7 +4,7 @@
  * License: MIT
  */
 
- let AWS = require('aws-sdk');
+let AWS = require('aws-sdk');
 let fs = require("fs");
 let fs1 = require("fs");
 
