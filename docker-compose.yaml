@@ -1,0 +1,28 @@
+version: '3'
+services:
+#    webserver:
+#        image: nginx:alpine
+#        container_name: webserver
+#        ports:
+#            - "8880:8880"
+#            - "443:443"
+#        restart: unless-stopped
+#        tty: true
+#        depends_on:
+#            - provider
+#        networks:
+#            - provider-network
+
+    provider:
+        build: .
+        ports:
+            - "8090:7000"
+        volumes:
+            - .:/sara
+        networks:
+            - sara
+
+# Docker Networks
+networks:
+    sara:
+        driver: bridge

@@ -1,22 +1,21 @@
-# saratoga
+# Saratoga Logs Analyzer
+### Copyright DevB 2016-2021
 
-Installation:
+### License MIT
 
-Sign in to the AWS Console. 
-Create a ‘Compute’ instance –EC2 or Lightsail. If using Lightsail, select Linux APP+OS Bitnami LAMP Stack blueprint.
+## Makefile
+### build, clean, run, prune, status. test
+'''
+    make [cmd]
+    ## Examples
+    make build
+    make test ARGS="vpcId"
+'''
 
-$ mkdir .saratoga
-
-$ cd .saratoga
-
-Git clone the repository to the instance
-
-$ ./install_nodejs.sh
-
-$ npm install
-
-$ ./saratoga_remote.sh
-
-The engine runs on port 5555. Test the instance http://<ip address>:5555
-
-The username and password is admin123 / Passw0rd1234
+### Parameters in curl post
+'''
+accessKeyId, accountId, arn, creationDate, dBInstanceArn
+eventName, eventSource, eventTime, principalId
+recipientAccountId, awsRegion, sourceIPAddress
+subnetIdentifier, vpcId
+'''
