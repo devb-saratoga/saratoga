@@ -17,8 +17,8 @@ exports.filterOutputResource = function (bparams) {
   if (bparams.filter != undefined) valueFor = bparams.filter;
   console.log('Filtering ', searchFor);
   fs1.readdirSync(ruf).forEach(file => {
-    var rfile = ruf + file;
-    let crudeoil = fs2.readFileSync(rfile, 'utf8');
+    var rifle = ruf + file;
+    let crudeoil = fs2.readFileSync(rifle, 'utf8');
     try {
       let klnd = JSON.parse(crudeoil);
       mylar(klnd,pft);

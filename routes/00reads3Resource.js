@@ -32,12 +32,12 @@ async function rebok(sobject) {
                     var lccon = sld.Contents;
                     for (var i = 0; i < lccon.length; i++) {
                         var ftnm = lccon[i].Key;
-                        var npp = {};
+                        var nppt = {};
                         var ext = rxfl.exec(ftnm)[1];
                         if (ext == "gz" || ext == "json") {
-                            npp.Bucket = "companyx";
-                            npp.Key = ftnm;
-                            firehose.push(npp);
+                            nppt.Bucket = "companyx";
+                            nppt.Key = ftnm;
+                            firehose.push(nppt);
                         }
                     }
                     resolve (firehose);

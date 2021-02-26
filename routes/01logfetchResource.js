@@ -19,11 +19,11 @@ async function getfirehose(sobject) {
         (resolve, reject) => {
             let paramsData = JSON.parse(fs.readFileSync('logobjects.json', 'utf8'));
             for (var i = 0; i <paramsData.length; i++) {
-                let plop = paramsData[i];
-                bctg.getObject(plop, function (oerr, odata) {
+                let ploppr = paramsData[i];
+                bctg.getObject(ploppr, function (oerr, odata) {
                     if (oerr) console.log(oerr, oerr.stack);
                     else {
-                        var frp = plop.Key; 
+                        var frp = ploppr.Key; 
                         var nfp = frp.replace(/^.*[\\\/]/, '')
                         console.log(nfp);
                         fs1.writeFileSync('files/'+nfp, odata.Body, (nerr) => {

@@ -8,16 +8,15 @@ const oof = './logs/';
 const fs1 = require('fs');
 const fs2 = require('fs');
 const fs3 = require('fs');
-var users = [], count = 0, searchFor = '';
+var users = [], count = 0, sft = '';
 
-exports.readOutputResource = function (bparams) {
-  searchFor = ''; users = []; count = 0;
-  if (bparams.search != undefined) searchFor = bparams.search;
-  if (searchFor == '') searchFor = 'userName';
-  console.log('Searching for ', searchFor);
+exports.readOutputResource = function (bp) {
+  sft = ''; users = []; count = 0;
+  if (bp.search != undefined) sft = bp.search;
+  if (sft == '') sft = 'userName';
   fs1.readdirSync(oof).forEach(file => {
-    var rfile = oof + file;
-    let lcd = fs2.readFileSync(rfile, 'utf8');
+    var rtail = oof + file;
+    let lcd = fs2.readFileSync(rtail, 'utf8');
     try {
       let dlw = JSON.parse(lcd);
       grainer(dlw,rainer);
@@ -37,23 +36,23 @@ function grainer(o,func) {
   }
 }
 
-function rainer(key,value) {
-  if (key == searchFor) {
+function rainer(aaa, bbb) {
+  if (aaa == sft) {
     if (users.length <= 0) {
-      users.push({"key":value, "value":1});
+      users.push({"key":bbb, "value":1});
     } 
     var found = false; 
     for (var i=0; i < users.length; i++) {
       var nm = users[i].key;
       var ct = users[i].value;
-      if (value === nm) {
+      if (bbb === nm) {
         ct++;
         users[i].value = ct;
         found = true; 
       } 
     }
     if (!found) {
-      users.push ({"key":value, "value":1});
+      users.push ({"key":bbb, "value":1});
       found = false;
     }
   }
