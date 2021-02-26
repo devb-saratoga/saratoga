@@ -1,7 +1,16 @@
-let zlib = require('zlib');
+/**
+ * Saratoga Logs Analyzer
+ * Author: devb. Copyright www.devb.com
+ * License: MIT
+ */
+
+ let zlib = require('zlib');
 let fs = require("fs");
 let fs1 = require("fs");
 
+/**
+ * Decode Gzip files
+ */
 async function decodeGz() {
     return new Promise(
         (resolve, reject) => {

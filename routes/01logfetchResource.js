@@ -1,4 +1,10 @@
-let AWS = require('aws-sdk');
+/**
+ * Saratoga Logs Analyzer
+ * Author: devb. Copyright www.devb.com
+ * License: MIT
+ */
+
+ let AWS = require('aws-sdk');
 let fs = require("fs");
 let fs1 = require("fs");
 
@@ -8,6 +14,10 @@ AWS.config.update({
 
 var s3 = new AWS.S3();
 
+/**
+ * function: getS3
+ * @param {*} sobject 
+ */
 async function getS3(sobject) {
     return new Promise(
         (resolve, reject) => {

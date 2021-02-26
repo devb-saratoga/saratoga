@@ -1,4 +1,10 @@
-const outFolder = './output/';
+/**
+ * Saratoga Logs Analyzer
+ * Author: devb. Copyright www.devb.com
+ * License: MIT
+ */
+
+ const outFolder = './output/';
 const fs1 = require('fs');
 const fs2 = require('fs');
 const fs3 = require('fs');

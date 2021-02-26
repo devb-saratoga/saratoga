@@ -1,3 +1,10 @@
+/**
+ * Saratoga Logs Analyzer
+ * Author: devb. Copyright www.devb.com
+ * License: MIT
+ */
+
+
 let AWS = require('aws-sdk');
 let fs = require("fs");
 
@@ -6,6 +13,10 @@ AWS.config.update({
 });
 var s3 = new AWS.S3();
 
+/**
+ * function: readS3
+ * @param {*} sobject 
+ */
 async function readS3(sobject) {
     return new Promise(
         (resolve, reject) => {

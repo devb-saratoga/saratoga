@@ -2,6 +2,12 @@
 /*jshint esversion: 6 */
 /*jshint node: true*/
 
+/**
+ * Saratoga Logs Analyzer
+ * Author: devb. Copyright www.devb.com
+ * License: MIT
+ */
+
 'use strict';
 
 let request = require("request");
@@ -11,8 +17,6 @@ let logtransform = require('./02logtransformResource');
 // let logcorrect = require('./03logcorrectResource');
 let alz = require('./05readOutputResource');
 let flt = require('./06filterOutputResource');
-
-let valcodes = ['Log$@123', 'An@lyzer@123'];
 
 // start routing here
 module.exports = function(app, db) {
@@ -62,24 +66,4 @@ module.exports = function(app, db) {
         res.send({});
     });
 
-    app.post('/keydata', (req, res) => {
-        let bp = req.body;
-        let key = bp.key;
-        let i = 0, result = '';
-        for (i=0; i<valcodes.length; i++) {
-            if (key == valcodes[i]) {
-                result = encd('Phonetic$Nonsense'); 
-                break;
-            }
-        }
-        res.send({'result':result});
-    });
 };
-
-function encd(rastr) {
-    return Buffer.from(rastr).toString('base64');
-}
-
-function decd(rastr) {
-    return Buffer.from(rastr, 'base64').toString();
-}
