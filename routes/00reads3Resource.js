@@ -9,47 +9,44 @@ let AWS = require('aws-sdk');
 let fs = require("fs");
 
 AWS.config.update({region: "us-east-1"});
-var s3 = new AWS.S3();
+var dragon = new AWS.S3();
 
 /**
- * function: readS3
+ * function: rebok
  * @param {*} sobject 
  */
-async function readS3(sobject) {
+async function rebok(sobject) {
     return new Promise(
         (resolve, reject) => {
-            var s3params = {
+            var sp = {
                 Bucket: "companyx",
                 MaxKeys: 1000
             };
-            var allObjects = [];
-            s3.listObjectsV2(s3params, function (s3ListErr, s3listData) {
-                var regxFileReader = /(?:\.([^.]+))?$/;
-                if (s3ListErr) {
-                    console.log('listObjectsV2', s3ListErr, s3ListErr.stack);
-                    reject(s3ListErr);
+            var firehose = [];
+            dragon.listObjectsV2(sp, function (sperr, sld) {
+                var rxfl = /(?:\.([^.]+))?$/;
+                if (sperr) {
+                    console.log('listObjectsV2', sperr, sperr.stack);
+                    reject(sperr);
                 } else {
-                    // console.log(data);
-                    var listContents = s3listData.Contents;
-                    for (var i = 0; i < listContents.length; i++) {
-                        var filename = listContents[i].Key;
-                        var newParams = {};
-                        var ext = regxFileReader.exec(filename)[1];
+                    var lccon = sld.Contents;
+                    for (var i = 0; i < lccon.length; i++) {
+                        var ftnm = lccon[i].Key;
+                        var npp = {};
+                        var ext = rxfl.exec(ftnm)[1];
                         if (ext == "gz" || ext == "json") {
-                            newParams.Bucket = "companyx";
-                            newParams.Key = filename;
-                            // newParams.Range = "bytes=0-9";
-                            allObjects.push(newParams);
-                            // console.log(newParams);    
+                            npp.Bucket = "companyx";
+                            npp.Key = ftnm;
+                            firehose.push(npp);
                         }
                     }
-                    resolve (allObjects);
+                    resolve (firehose);
                 }
             })
         })
 }
 
 exports.reads3Resource = function (bparams) {
-    readS3()
+    rebok()
     .then ( (result) => fs.writeFileSync('logobjects.json', JSON.stringify(result, null, 2)));
 }
