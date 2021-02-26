@@ -1,6 +1,8 @@
 # Saratoga Logs Analyzer
 ### Copyright DevB 2016-2021
 
+![Logo](img/saratoga01.png)
+
 ### License MIT
 
 ## Makefile
