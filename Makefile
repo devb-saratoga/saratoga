@@ -19,4 +19,7 @@ test1:
 	curl -v --insecure --header "Content-Type: application/json" --request POST --data '{"search": "$(ARGS)"}' http://localhost:8090/analyzelogs
 
 test2:
-	curl -v --insecure --header "Content-Type: application/json" --request POST --data '{"filter1": "$(ARG1)", "filter2": "$(ARG2)"}' http://localhost:8090/findlogs
+	curl -v --insecure --header "Content-Type: application/json" --request POST --data '{"f1": "$(ARG1)", "f2": "$(ARG2)", "f3": "$(ARG3)"}' http://localhost:8090/findlogs
+
+test3:
+	curl -v --insecure --header "Content-Type: application/json" --request POST --data '{"f1": "$(ARG1)", "f2": "$(ARG2)"}' http://localhost:8090/findlogs

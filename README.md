@@ -28,9 +28,10 @@ subnetIdentifier, vpcId
 ```
 
 # Find in logs
-### Searching in all logs requires two arguments start and end
+### Searching in all logs requires two or more arguments for start, intermediates and end
 ```
-    make test2 ARG1="chainbeldb" ARG2="mysql"
+    make test2 ARG1="sg-d3260ecc" ARG2="is associated" ARG3="chainbeldb"
+    make test3 ARG1="sg-d3260ecc" ARG2="is associated"
 ```
 
 # License
