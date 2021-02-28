@@ -15,5 +15,8 @@ status:
 prune:
 	docker rmi $(docker images -a -q)
 
-test:
+test1:
 	curl -v --insecure --header "Content-Type: application/json" --request POST --data '{"search": "$(ARGS)"}' http://localhost:8090/analyzelogs
+
+test2:
+	curl -v --insecure --header "Content-Type: application/json" --request POST --data '{"filter1": "$(ARG1)", "filter2": "$(ARG2)"}' http://localhost:8090/findlogs

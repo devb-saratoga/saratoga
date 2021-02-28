@@ -16,6 +16,8 @@ let logfetch = require('./01logfetchResource');
 let logtransform = require('./02logtransformResource');
 let alz = require('./05readOutputResource');
 let flt = require('./06filterOutputResource');
+let flg = require('./07findInLog');
+
 
 // start routing here
 module.exports = function(app, db) {
@@ -32,6 +34,13 @@ module.exports = function(app, db) {
         let bp = req.body;
         let filter = flt.filterOutputResource(bp);
         res.send(filter);
+    });
+
+    app.post('/findlogs', (req, res) => {
+        console.log('/find logs', req.body);
+        let bp = req.body;
+        let findLog = flg.findInLogs(bp);
+        res.send(findLog);
     });
 
     app.post('/fetchlogs', (req, res) => {
