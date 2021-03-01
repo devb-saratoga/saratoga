@@ -17,6 +17,7 @@ let logtransform = require('./02logtransformResource');
 let alz = require('./05readOutputResource');
 let flt = require('./06filterOutputResource');
 let flg = require('./07findInLog');
+let clg = require('./08copylogs');
 
 
 // start routing here
@@ -41,6 +42,13 @@ module.exports = function(app, db) {
         let bp = req.body;
         let findLog = flg.findInLogs(bp);
         res.send(findLog);
+    });
+
+    app.post('/copylogs', (req, res) => {
+        console.log('/copy logs', req.body);
+        let bp = req.body;
+        let copylog = clg.copyLogs(bp);
+        res.send(copylog);
     });
 
     app.post('/fetchlogs', (req, res) => {

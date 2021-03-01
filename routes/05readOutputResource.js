@@ -4,16 +4,18 @@
  * License: MIT
  */
 
-const oof = './logs/';
 const fs1 = require('fs');
 const fs2 = require('fs');
 const fs3 = require('fs');
+const path = require("path");
 var users = [], count = 0, sft = '';
 
 exports.readOutputResource = function (bp) {
   sft = ''; users = []; count = 0;
   if (bp.search != undefined) sft = bp.search;
   if (sft == '') sft = 'userName';
+
+  const oof = './data/logs/';
   fs1.readdirSync(oof).forEach(file => {
     var rtail = oof + file;
     let lcd = fs2.readFileSync(rtail, 'utf8');

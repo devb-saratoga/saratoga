@@ -5,7 +5,7 @@ services:
         ports:
             - "8090:7000"
         volumes:
-            - .:/sara
+            - /home/devbnjhp/nodejs/data/:/usr/src/app/data/
         networks:
             - sara
 

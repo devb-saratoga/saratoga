@@ -34,6 +34,12 @@ subnetIdentifier, vpcId
     make test3 ARG1="sg-d3260ecc" ARG2="is associated"
 ```
 
+# Copy logs
+### Copy filtered logs. Requires two or more arguments for start, intermediates and end
+```
+    make test4 ARG1="sg-d3260ecc" ARG2="is associated"
+```
+
 # License
 ### MIT License
 

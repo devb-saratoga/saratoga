@@ -4,7 +4,7 @@
  * License: MIT
  */
 
-const ruf = './logs/';
+const ruf = './data/logs/';
 const fs1 = require('fs');
 const fs2 = require('fs');
 const fs3 = require('fs');
