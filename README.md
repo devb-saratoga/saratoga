@@ -38,6 +38,7 @@ subnetIdentifier, vpcId
 ### Copy filtered logs. Requires two or more arguments for start, intermediates and end
 ```
     make test4 ARG1="sg-d3260ecc" ARG2="is associated"
+    make test4 ARG1="AROAJ4Z5B7AFJ23E334N2" ARG2="east-2"
 ```
 
 # License

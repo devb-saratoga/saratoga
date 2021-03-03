@@ -29,3 +29,6 @@ test3:
 
 test4:
 	curl -v --insecure --header "Content-Type: application/json" --request POST --data '{"f1": "$(ARG1)", "f2": "$(ARG2)"}' http://localhost:8090/copylogs
+
+test5:
+	curl -v --insecure --header "Content-Type: application/json" --request POST --data '{"f1": "$(ARG1)", "f2": "$(ARG2)", "f3": "$(ARG3)"}' http://localhost:8090/copylogs

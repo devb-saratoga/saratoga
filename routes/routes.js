@@ -17,7 +17,7 @@ let logtransform = require('./02logtransformResource');
 let alz = require('./05readOutputResource');
 let flt = require('./06filterOutputResource');
 let flg = require('./07findInLog');
-let clg = require('./08copylogs');
+let clg = require('./08copylogsc');
 
 
 // start routing here
