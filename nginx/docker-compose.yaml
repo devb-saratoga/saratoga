@@ -1,13 +1,12 @@
 version: '3'
 services:
-    provider:
+    nginx:
         build: .
-        ports:
-            - "8090:7000"
-        volumes:
-            - /home/devbnjhp/nodejs/data/:/usr/src/app/data/
+        ports: 
+            - "8000:80"
         networks:
             - sara
+
 
 # Docker Networks
 networks:

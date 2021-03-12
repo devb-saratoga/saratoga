@@ -17,7 +17,9 @@ let logtransform = require('./02logtransformResource');
 let alz = require('./05readOutputResource');
 let flt = require('./06filterOutputResource');
 let flg = require('./07findInLog');
-let clg = require('./08copylogsc');
+let clgsync = require('./08copylogs');
+let clgssync = require('./08copylogsb');
+let clgasync = require('./08copylogsc');
 
 
 // start routing here
@@ -44,11 +46,25 @@ module.exports = function(app, db) {
         res.send(findLog);
     });
 
-    app.post('/copylogs', (req, res) => {
-        console.log('/copy logs', req.body);
+    app.post('/copylogasync', (req, res) => {
+        console.log('/copy logs async', req.body);
         let bp = req.body;
-        let copylog = clg.copyLogs(bp);
-        res.send(copylog);
+        let copylog3 = clgasync.copyLogs(bp);
+        res.send(copylog3);
+    });
+
+    app.post('/copylogsync', (req, res) => {
+        console.log('/copy logs sync', req.body);
+        let bp = req.body;
+        let copylog1 = clgsync.copyLogs(bp);
+        res.send(copylog1);
+    });
+
+    app.post('/copylogssync', (req, res) => {
+        console.log('/copy logs semi sync', req.body);
+        let bp = req.body;
+        let copylog2 = clgssync.copyLogs(bp);
+        res.send(copylog2);
     });
 
     app.post('/fetchlogs', (req, res) => {

@@ -1,0 +1,40 @@
+version: '3'
+services:
+    nginx:
+        build: ../nginx/.
+        ports: 
+            - "80"
+        networks:
+            - sara
+
+    provider1:
+        build: .
+        ports:
+            - "8090:7000"
+        volumes:
+            - /home/dev/nodejs/data/:/usr/src/app/data/
+        networks:
+            - sara
+
+    provider2:
+        build: .
+        ports:
+            - "8091:7000"
+        volumes:
+            - /home/dev/nodejs/data/:/usr/src/app/data/
+        networks:
+            - sara
+
+    provider3:
+        build: .
+        ports:
+            - "8092:7000"
+        volumes:
+            - /home/dev/nodejs/data/:/usr/src/app/data/
+        networks:
+            - sara
+
+# Docker Networks
+networks:
+    sara:
+        driver: bridge

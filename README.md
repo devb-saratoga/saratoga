@@ -34,11 +34,29 @@ subnetIdentifier, vpcId
     make test3 ARG1="sg-d3260ecc" ARG2="is associated"
 ```
 
-# Copy logs
+# Copy logs asynchronous
 ### Copy filtered logs. Requires two or more arguments for start, intermediates and end
 ```
     make test4 ARG1="sg-d3260ecc" ARG2="is associated"
     make test4 ARG1="AROAJ4Z5B7AFJ23E334N2" ARG2="east-2"
+```
+
+# Copy logs asynchronous (3 args)
+### Copy filtered logs. Requires two or more arguments for start, intermediates and end
+```
+    make test5 ARG1="sg-d3260ecc" ARG2="is associated" ARG3="chainbeldb"
+```
+
+# Copy logs synchronous (3 args)
+### Copy filtered logs. Requires two or more arguments for start, intermediates and end
+```
+    make test6 ARG1="sg-d3260ecc" ARG2="is associated" ARG3="chainbeldb"
+```
+
+# Copy logs semi synchronous (3 args)
+### Copy filtered logs. Requires two or more arguments for start, intermediates and end
+```
+    make test7 ARG1="sg-d3260ecc" ARG2="is associated" ARG3="chainbeldb"
 ```
 
 # License
